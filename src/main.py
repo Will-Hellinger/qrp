@@ -15,8 +15,8 @@ def main(data: str | None, filename: str | None):
 
 
 if __name__ == '__main__':
-    parser: argparse.ArgumentParser = argparse.ArgumentParser(description='Generate QR code')
-    parser.add_argument('-d', '--data', type=str, help='Data to encode in QR code.')
+    parser: argparse.ArgumentParser = argparse.ArgumentParser(description='Generate a QR code')
+    parser.add_argument('-d', '--data', type=str, help='Data to encode in QR code')
     parser.add_argument('-f', '--filename', type=str, help='Filename to save QR code')
     args: argparse.Namespace = parser.parse_args()
 
@@ -29,7 +29,7 @@ if __name__ == '__main__':
         filename += '.png'
 
     data: str | None = None
-    
+
     if args.data:
         data = args.data
 
